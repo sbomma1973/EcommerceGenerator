@@ -1,1 +1,1 @@
-# LogisticsDataGenerator
+#Ecommerce Click Stream Data Generator
