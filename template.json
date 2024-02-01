@@ -1,0 +1,92 @@
+{
+  "index_patterns": [
+    "logistics-data",
+    "pickup-logistics-data"
+  ],
+  "settings": {},
+  "mappings": {
+    "properties": {
+      "shipper": {
+        "properties": {
+          "geo": {
+            "properties": {
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          }
+        }
+      },
+      "load": {
+        "properties": {
+          "timestamps": {
+            "properties": {
+              "delivery_deadline": {
+                "type": "date"
+              },
+              "order_delivered": {
+                "type": "date"
+              },
+              "order_picked_up": {
+                "type": "date"
+              },
+              "order_placed": {
+                "type": "date"
+              },
+              "negotiation_complete": {
+                "type": "date"
+              },
+              "driver_assigned": {
+                "type": "date"
+              }
+            }
+          },
+          "phase": {
+            "type": "keyword"
+          },
+          "broker": {
+            "properties": {
+              "name": {
+                "type": "keyword"
+              }
+            }
+          },
+          "geo": {
+            "properties": {
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          },
+          "path": {
+            "type": "geo_shape"
+          },
+          "driver": {
+            "properties": {
+              "name": {
+                "type": "keyword"
+              },
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          },
+          "id": {
+            "type": "long"
+          }
+        }
+      },
+      "destination": {
+        "properties": {
+          "geo": {
+            "properties": {
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
